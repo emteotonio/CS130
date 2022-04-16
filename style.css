@@ -1,21 +1,30 @@
 /* You're welcome to change any of this! */
 * {
-    box-sizing: border-box;
+    box-sizing:inherit;
+}
+header {
+    padding:20px;
+    background-color: rgb(244, 145, 162);;
+    display:flexbox;
+    align-items: left;
+    justify-content: center;
+    color: #100f0f;
+    
 }
 
 body {
     margin: 0px;
-    font-family: Arial, sans-serif;
-}
-header, section {
+    display:flow-root; 
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: rgb(244, 145, 162);
+    background-color: #100f0f;
     padding: 20px;
-}
-p, li {
-    line-height: 1.5em;
+    line-height: 100px;
+    
 }
 
-#inspiration {
-    background-color: #F0F0F0;
-    padding-top: 40px;
-    padding-bottom: 40px;
-}
+
+
+p, li {
+    line-height: 1.5em;
+    }

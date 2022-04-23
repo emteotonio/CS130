@@ -1,0 +1,107 @@
+body * {
+   width: 100%;
+   box-sizing: border-box;
+   font-family: 'Arial';
+}
+body {
+   margin: 30px;
+}
+
+.container {
+   color: white;
+   display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 3fr 3fr;
+    row-gap: 10px;
+    column-gap: 20px;
+    grid-template-areas:
+    "left .  right right"
+    "card1 card2 card3 side"
+    "feature feature feature side"; 
+    min-height: 100vh;
+}
+
+article, aside, section, main {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   border: none;
+   margin: 20px;
+}
+
+.menu1 {
+   grid-area: left;
+   background: rgb(251, 6, 128);
+   
+}
+
+.menu2 {
+   grid-area: right;
+   background: yellow;
+}
+
+.card1{
+   grid-area: card1; 
+   background: rgb(8, 156, 186);
+}
+
+.card2{
+   grid-area: card2;
+   background:rgb(8, 156, 186);
+}
+
+.card3{
+   grid-area: card3;
+   background:rgb(8, 156, 186);
+}
+
+.aside{
+   grid-area: side;
+   background: rgb(55, 54, 54)
+}
+
+.main{
+   grid-area: feature; 
+   background:rgb(8, 156, 186)
+}
+
+@media (max-width: 1200px) {
+   .container {
+      color: white;
+      display: grid;
+       grid-template-columns: 1fr 1fr 1fr 1fr;
+       grid-template-rows: 1fr 1fr 5fr 3fr 3fr;
+       column-gap: 20px;
+       grid-template-areas:
+       "left .  right right"
+       "side side side side"
+       "card1 card1 card2 card2"
+       "card3 card3 card3 card3"
+       "feature feature feature feature"; 
+       min-height: 100vh;
+   }
+   body {
+      margin:5px;
+   }
+}
+
+@media (max-width: 600px) {
+   .container {
+      color:white;
+      display: grid;
+         grid-template-columns: 2fr 3fr;
+         grid-template-rows: 1fr 1fr 1fr 3fr 3fr 3fr 3fr;
+         row-gap: 5px;
+         grid-template-areas:
+         "left ."
+         "right right"
+         "side side"
+         "card1 card1"
+         "card2 card2"
+         "card3 card3"
+         "feature feature";
+         min-height: 100vh;
+   }
+   body {
+      margin: 5px;}
+}

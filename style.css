@@ -1,22 +1,66 @@
-* {
-    box-sizing:inherit;
+body{
+    background-color: rgb(57, 46, 38);
 }
-header {
-    padding:20px;
-    background-color: rgb(244, 145, 162);;
-    display:flexbox;
-    align-items: left;
-    justify-content: center;
-    color: #100f0f;
+main{
+    display: grid;
+     grid-template-columns: 1fr 3fr 3fr 3fr;
+     grid-template-rows: 1fr 3fr;
+     grid-template-areas: 
+        "side tutorials homework"
+        "side design design";
+    row-gap: 5%;
+    column-gap: 5%;
+    
+
+}
+
+#tutorials{
+    grid-area: tutorials;
+    color: brown;
+    border-style: hidden;
+    border-radius: 10%;
+    padding: 10%;
+    background-color: rgb(242, 242, 213);
+    width: fit-content;
+    height: fit-content;
     
 }
 
-body {
-    margin: 0px;
-    display:flow-root; 
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    color: rgb(244, 145, 162);
-    background-color: #100f0f;
-    padding: 20px;
-    line-height: 100px;
+header{
+    background-color:pink;
+    width: 100vh;
+    height: 60px;
+    transform-origin: top left;
+    position: absolute;
+    left:10;
+    top: 100%;
+    transform: rotate(-90deg);
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+#homework{
+    grid-area: homework;
+    color: brown;
+    border-style: hidden;
+    border-radius: 100%;
+    padding: 10%;
+    background-color: rgb(242, 242, 213);
+    width:fit-content; 
+    height: fit-content;
+    margin-top: 5em;
+}
+
+#inspiration{
+    grid-area: design;
+    color: brown;
+    border-style: hidden;
+    border-radius: 10%;
+    padding: 5%;
+    background-color: rgb(242, 242, 213);
+    height: fit-content;
+    width: fit-content;
 }

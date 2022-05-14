@@ -17,6 +17,7 @@
  * 
  * 
  */
+let currentIndex=0;
 
 const images = [
     'images/field1.jpg',
@@ -33,12 +34,58 @@ const initScreen = () => {
     images.forEach((image, idx) => {
         document.querySelector('.cards').innerHTML += `
         <li class="card">
-            <button class="image" 
+            <div class="image" 
+                onclick="handleThumbnailClick(event)"
                 style="background-image:url('${image}')"
                 data-index=${idx}"
                 aria-label="Displays image ${idx} in the main panel."></button>
         </li>`;
+        
     });
 };
+
+
+const handleThumbnailClick = ev => {
+    console.log(ev);
+    const element = ev.currentTarget;
+    console.log(element);
+    const bgImage= element.style.backgroundImage;
+    document.querySelector('.featured_image').style.backgroundImage = bgImage;
+    currentIndex = Number (elem.getAttribute('data-index'));
+    
+};
+
+const showPrev = () => {
+    if (currentIndex > 0) {
+        currentIndex -= 1;
+    } else {
+        currentIndex = 7;
+    }
+    console.log('Show next image', currentIndex);
+    console.log(images[currentIndex]);
+    document.querySelector('.featured_image').style.backgroundImage =
+    ` url('${images[currentIndex]}') `;
+};
+
+const showNext = () => {
+    if (currentIndex < 7) {
+        currentIndex += 1;
+    } else {
+        currentIndex = 0;
+    }
+    console.log('Show next image', currentIndex);
+    console.log(images[currentIndex]);
+    document.querySelector('.featured_image').style.backgroundImage =
+    ` url('${images[currentIndex]}') `;
+};
+
+const imageElements = document.querySelectorAll('.image');
+for (const elem of imageElements) {
+    elem.onclick = showImage;
+}
+
+document.querySelector('.next').onclick = showNext;
+document.querySelector('.prev').onclick = showPrev;
+document.querySelector('.featured_image').onclick = showNext;
 
 initScreen();

@@ -1,7 +1,7 @@
 const baseURL = 'https://www.apitutor.org/spotify/simple/v1/search';
 
 // Note: AudioPlayer is defined in audio-player.js
-const audioFile = 'https://p.scdn.co/mp3-preview/bfead324ff26bdd67bb793114f7ad3a7b328a48e?cid=9697a3a271d24deea38f8b7fbfa0e13c';
+const audioFile = 'https://p.scdn.co/mp3-preview/879c7106422b0b53852209da6a63210be7e09b01?cid=9697a3a271d24deea38f8b7fbfa0e13c';
 const audioPlayer = AudioPlayer('.player', audioFile);
 
 const search = (ev) => {
@@ -37,10 +37,6 @@ const getArtist = (term) => {
         of the DOM...`);
 };
 
-const handleTrackClick = (ev) => {
-    const previewUrl = ev.currentTarget.getAttribute('data-preview-track');
-    console.log(previewUrl);
-}
 
 document.querySelector('#search').onkeyup = (ev) => {
     // Number 13 is the "Enter" key on the keyboard

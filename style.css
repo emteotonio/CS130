@@ -6,8 +6,8 @@ main{
      grid-template-columns: 1fr 3fr 3fr 3fr;
      grid-template-rows: 1fr 3fr;
      grid-template-areas: 
-        "side tutorials homework"
-        "side design design";
+        "side tutorials homework project"
+        "side design design design";
     row-gap: 5%;
     column-gap: 5%;
     
@@ -23,6 +23,7 @@ main{
     background-color: rgb(242, 242, 213);
     width: fit-content;
     height: fit-content;
+    margin-top: 2em;
     
 }
 
@@ -63,4 +64,16 @@ header{
     background-color: rgb(242, 242, 213);
     height: fit-content;
     width: fit-content;
+}
+
+#project{
+    grid-area: project;
+    color: brown;
+    border-style: hidden;
+    border-radius: 10%;
+    padding: 10%;
+    background-color: rgb(242, 242, 213);
+    width: fit-content;
+    height: fit-content;
+    margin-top: 7em;
 }

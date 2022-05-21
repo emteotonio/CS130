@@ -1,0 +1,24 @@
+body{
+    display: flex;
+    justify-content: center;
+    margin-top: 7em;
+    color: white;
+    background-color: rgb(15, 1, 21);
+    font-size: 30px;
+}
+
+h1{
+
+}
+
+button{
+    margin-top: 3em;
+    margin-left: 5em;
+    color: white;
+    background-color: rgb(174, 12, 174);
+    height: 4em;
+    width: 10em;
+    font-size: 30px;
+    border-radius: 50%;
+    font-family: 'Courier New', Courier, monospace;
+}

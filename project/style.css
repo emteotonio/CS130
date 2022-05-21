@@ -1,0 +1,50 @@
+body{
+    background-color: rgb(174, 12, 174);
+    display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 2fr 1fr;
+        grid-template-areas: 
+            "text cat cat"
+            "gen gen gen";
+        row-gap: 8px;
+        column-gap: 8px;
+}
+
+.sum{
+    grid-area: text; 
+    display: flex; 
+    justify-content: right;
+    background-color: rgb(15, 1, 21);
+    color: white;
+    padding-right: 2em;
+    height: 540px;
+}
+
+.cat{
+    grid-area: cat;
+    display: flex;
+    justify-content: right;
+    background-color:rgb(15, 1, 21)
+}
+
+.button{
+    grid-area: gen;
+    display: flex;
+    justify-content: center;
+    background-color:rgb(15, 1, 21) ;
+    height:226px;
+}
+
+button{
+    background-color:rgb(174, 12, 174);
+    height: 80px;
+    width: 300px;
+    margin-top: 75px;
+    font-size: 2em;
+    font-family: "Lucida Handwriting";
+    color: white;
+    border-style:groove;
+    border-width: 5px;
+    border-color: white;
+    
+}

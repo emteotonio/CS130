@@ -1,7 +1,7 @@
 const baseURL = 'https://www.apitutor.org/spotify/simple/v1/search';
 
 // Note: AudioPlayer is defined in audio-player.js
-const audioFile = 'https://p.scdn.co/mp3-preview/879c7106422b0b53852209da6a63210be7e09b01?cid=9697a3a271d24deea38f8b7fbfa0e13c';
+const audioFile = 'https://p.scdn.co/mp3-preview/e6c4c9656721fe0a042b61be26adbb57c7032a73?cid=9697a3a271d24deea38f8b7fbfa0e13c';
 const audioPlayer = AudioPlayer('.player', audioFile);
 
 const search = (ev) => {
